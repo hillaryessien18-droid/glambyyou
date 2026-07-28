@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #faf7f5;
+  --color-foreground: #2d2d2d;
+  --color-primary: #d47676;
+  --color-primary-light: #f4c2c2;
+  --color-primary-dark: #b85555;
+  --color-secondary: #d4af37;
+  --color-secondary-light: #f0e0a0;
+  --color-accent: #e8d5c4;
+  --color-nude: #f5e6d3;
+  --color-nude-light: #faf0e8;
+  --color-nude-dark: #d4c4b0;
+  --color-warm-brown: #8b7355;
+  --color-soft-white: #fffcf9;
+  --color-rose-gold: #e8a0a0;
+  --color-dark: #1a1a1a;
+  --color-muted: #9ca3af;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-down: slide-down 0.3s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-foreground);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(212, 118, 118, 0.12);
+}
+
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37, #f0e0a0, #d4af37);
+}
+
+.nude-gradient {
+  background: linear-gradient(135deg, #faf0e8, #f5e6d3, #e8d5c4);
+}
