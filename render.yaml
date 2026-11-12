@@ -1,0 +1,45 @@
+# Render Blueprint: PostgreSQL + Django API + Next.js storefront.
+# Deploy with: Render Dashboard → New → Blueprint → select this repository.
+databases:
+  - name: glambyyou-db
+    plan: free
+    databaseName: glambyyou
+    user: glambyyou
+
+services:
+  - type: web
+    name: glambyyou-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: ./build.sh
+    startCommand: gunicorn config.wsgi:application --workers 2 --timeout 60
+    healthCheckPath: /api/health/
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.14"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: glambyyou-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://glambyyou-web.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://glambyyou-web.onrender.com
+
+  - type: web
+    name: glambyyou-web
+    runtime: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NEXT_PUBLIC_API_URL
+        value: https://glambyyou-api.onrender.com/api
