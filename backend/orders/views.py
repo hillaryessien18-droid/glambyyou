@@ -1,3 +1,5 @@
+import logging
+
 from django.db import transaction
 from django.db.models import F
 from django.shortcuts import get_object_or_404
@@ -10,9 +12,17 @@ from rest_framework.views import APIView
 
 from catalog.models import Product
 
+from . import payments
 from .models import Coupon, Order, OrderItem
 from .pricing import build_quote
-from .serializers import CreateOrderSerializer, OrderSerializer, QuoteRequestSerializer
+from .serializers import (
+    CreateOrderSerializer,
+    OrderSerializer,
+    QuoteRequestSerializer,
+    VerifyPaymentSerializer,
+)
+
+logger = logging.getLogger(__name__)
 
 
 @extend_schema(request=QuoteRequestSerializer, responses={200: dict})
@@ -51,14 +61,18 @@ class OrderViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Ge
 
         with transaction.atomic():
             quote = build_quote(data["items"], data.get("couponCode", ""), lock=True)
-            # Payments run in test mode: card orders are marked paid immediately,
-            # cash on delivery stays unpaid until fulfilment.
-            paid = data["paymentMethod"] == "card"
+            # Online orders wait for Flutterwave to confirm payment; without
+            # Flutterwave keys they run in test mode and are marked paid at once.
+            # Cash on delivery stays unpaid until fulfilment.
+            online = data["paymentMethod"] == "card"
+            awaiting = online and payments.online_payments_enabled()
             order = Order.objects.create(
                 user=request.user if request.user.is_authenticated else None,
                 email=data["email"].lower(),
-                status=Order.Status.CONFIRMED,
-                payment_status=Order.PaymentStatus.PAID if paid else Order.PaymentStatus.UNPAID,
+                status=Order.Status.PENDING if awaiting else Order.Status.CONFIRMED,
+                payment_status=(
+                    Order.PaymentStatus.PAID if online and not awaiting else Order.PaymentStatus.UNPAID
+                ),
                 payment_method=data["paymentMethod"],
                 first_name=shipping["firstName"],
                 last_name=shipping["lastName"],
@@ -95,7 +109,15 @@ class OrderViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Ge
             if quote.coupon:
                 Coupon.objects.filter(pk=quote.coupon.pk).update(times_used=F("times_used") + 1)
 
-        return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
+        body = OrderSerializer(order).data
+        if awaiting:
+            try:
+                body["paymentUrl"] = payments.create_payment_link(order)
+            except payments.PaymentError as exc:
+                with transaction.atomic():
+                    Order.objects.select_for_update().get(pk=order.pk).cancel_and_restock()
+                return Response({"detail": str(exc)}, status=status.HTTP_502_BAD_GATEWAY)
+        return Response(body, status=status.HTTP_201_CREATED)
 
     @extend_schema(request=None, responses=OrderSerializer)
     @action(detail=True, methods=["post"])
@@ -107,13 +129,7 @@ class OrderViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.Ge
                     {"detail": f"Orders that are {order.status} can no longer be cancelled."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
-            for item in order.items.all():
-                if item.product_id:
-                    Product.objects.filter(pk=item.product_id).update(stock=F("stock") + item.quantity)
-            order.status = Order.Status.CANCELLED
-            if order.payment_status == Order.PaymentStatus.PAID:
-                order.payment_status = Order.PaymentStatus.REFUNDED
-            order.save(update_fields=["status", "payment_status", "updated_at"])
+            order.cancel_and_restock()
         return Response(OrderSerializer(order).data)
 
 
@@ -135,3 +151,69 @@ class TrackOrderView(APIView):
             email=request.query_params.get("email", "").strip().lower(),
         )
         return Response(OrderSerializer(order).data)
+
+
+class VerifyPaymentView(APIView):
+    """Called when Flutterwave redirects the shopper back to the storefront.
+
+    Confirms the payment with Flutterwave before marking the order paid, or
+    releases the reserved stock if the shopper backed out.
+    """
+
+    permission_classes = [permissions.AllowAny]
+
+    @extend_schema(request=VerifyPaymentSerializer, responses=OrderSerializer)
+    def post(self, request):
+        serializer = VerifyPaymentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+
+        with transaction.atomic():
+            order = get_object_or_404(
+                Order.objects.select_for_update(),
+                order_number=data["orderNumber"].strip().upper(),
+                email=data["email"].strip().lower(),
+            )
+            if order.awaiting_payment:
+                if data.get("status") == "cancelled":
+                    order.cancel_and_restock()
+                elif data.get("transactionId"):
+                    try:
+                        tx = payments.verify_transaction(data["transactionId"], order)
+                    except payments.PaymentError as exc:
+                        return Response({"detail": str(exc)}, status=status.HTTP_502_BAD_GATEWAY)
+                    if not tx:
+                        return Response(
+                            {"detail": "We couldn't confirm your payment, so this order hasn't been charged."},
+                            status=status.HTTP_402_PAYMENT_REQUIRED,
+                        )
+                    order.mark_paid(tx["id"])
+        return Response(OrderSerializer(Order.objects.prefetch_related("items").get(pk=order.pk)).data)
+
+
+class FlutterwaveWebhookView(APIView):
+    """Backup confirmation in case the shopper closes the tab before the redirect."""
+
+    authentication_classes = []
+    permission_classes = [permissions.AllowAny]
+    throttle_classes = []
+
+    @extend_schema(exclude=True)
+    def post(self, request):
+        if not payments.valid_webhook_signature(request.headers.get("verif-hash")):
+            return Response(status=status.HTTP_401_UNAUTHORIZED)
+        tx = request.data.get("data") or {}
+        if request.data.get("event") != "charge.completed" or tx.get("status") != "successful":
+            return Response({"received": True})
+
+        with transaction.atomic():
+            order = Order.objects.select_for_update().filter(order_number=tx.get("tx_ref")).first()
+            if order and order.awaiting_payment:
+                try:
+                    verified = payments.verify_transaction(tx.get("id"), order)
+                except (payments.PaymentError, TypeError, ValueError):
+                    logger.exception("Could not verify webhook transaction %s", tx.get("id"))
+                    return Response(status=status.HTTP_503_SERVICE_UNAVAILABLE)
+                if verified:
+                    order.mark_paid(verified["id"])
+        return Response({"received": True})

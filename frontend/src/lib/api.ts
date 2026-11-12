@@ -335,8 +335,26 @@ export async function createOrder(order: {
   paymentMethod: "card" | "cash_on_delivery";
   couponCode?: string;
   notes?: string;
+}): Promise<Order & { paymentUrl?: string }> {
+  return (await api.post<Order & { paymentUrl?: string }>("/orders/", { ...order, items: toLines(order.items) })).data;
+}
+
+/** Confirms (or abandons) a Flutterwave payment after the shopper is redirected back. */
+export async function verifyPayment(params: {
+  orderNumber: string;
+  email: string;
+  transactionId?: string | null;
+  status?: string | null;
 }): Promise<Order> {
-  return (await api.post<Order>("/orders/", { ...order, items: toLines(order.items) })).data;
+  const { orderNumber, email, transactionId, status } = params;
+  return (
+    await api.post<Order>("/orders/verify-payment/", {
+      orderNumber,
+      email,
+      ...(transactionId ? { transactionId: Number(transactionId) } : {}),
+      ...(status ? { status } : {}),
+    })
+  ).data;
 }
 
 export async function getOrders(page = 1): Promise<Paginated<Order>> {

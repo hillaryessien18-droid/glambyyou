@@ -13,8 +13,8 @@ import {
   type ShippingDetails,
 } from "@/lib/api";
 
-type Step = "shipping" | "payment" | "confirm";
-const STEPS: Step[] = ["shipping", "payment", "confirm"];
+type Step = "shipping" | "payment";
+const STEPS: Step[] = ["shipping", "payment"];
 
 const COUNTRIES = [
   ["US", "United States"],
@@ -26,31 +26,6 @@ const COUNTRIES = [
   ["KE", "Kenya"],
   ["ZA", "South Africa"],
 ] as const;
-
-/** Luhn checksum — catches typos before the order is submitted. */
-function isValidCardNumber(value: string) {
-  const digits = value.replace(/\D/g, "");
-  if (digits.length < 12 || digits.length > 19) return false;
-  let sum = 0;
-  for (let i = 0; i < digits.length; i++) {
-    let d = Number(digits[digits.length - 1 - i]);
-    if (i % 2 === 1) {
-      d *= 2;
-      if (d > 9) d -= 9;
-    }
-    sum += d;
-  }
-  return sum % 10 === 0;
-}
-
-function isValidExpiry(value: string) {
-  const match = /^(\d{2})\s*\/\s*(\d{2})$/.exec(value);
-  if (!match) return false;
-  const month = Number(match[1]);
-  const year = 2000 + Number(match[2]);
-  if (month < 1 || month > 12) return false;
-  return new Date(year, month) > new Date();
-}
 
 const money = (n: number) => `$${Number(n).toFixed(2)}`;
 
@@ -78,13 +53,16 @@ export default function CheckoutPage() {
     postalCode: "",
     country: "US",
   });
-  const [card, setCard] = useState({ number: "", expiry: "", cvc: "", name: "" });
-  const [cardError, setCardError] = useState("");
 
   const lines = useMemo(() => cart.map((i) => ({ productId: i.product.id, quantity: i.quantity })), [cart]);
 
   useEffect(() => {
     setMounted(true);
+    // Shoppers who back out of the Flutterwave page land here with their cart intact.
+    if (new URLSearchParams(window.location.search).get("payment") === "cancelled") {
+      setError("Payment was cancelled and you have not been charged. You can try again below.");
+      setStep("payment");
+    }
   }, []);
 
   useEffect(() => {
@@ -161,29 +139,26 @@ export default function CheckoutPage() {
         couponCode: appliedCoupon || undefined,
       });
       sessionStorage.setItem("glam-last-order", JSON.stringify(order));
+      if (order.paymentUrl) {
+        // Hand off to Flutterwave's secure page; the cart is cleared once payment is confirmed.
+        window.location.assign(order.paymentUrl);
+        return;
+      }
       clearCart();
       notify("Order placed — thank you!");
       router.push(`/checkout/success?order=${order.orderNumber}`);
     } catch (err) {
       setError(errorMessage(err, "We couldn't place your order. Please try again."));
-    } finally {
-      setPlacing(false);
     }
+    setPlacing(false);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (step === "shipping") {
+      setError("");
       setStep("payment");
-    } else if (step === "payment") {
-      if (paymentMethod === "card") {
-        if (!isValidCardNumber(card.number)) return setCardError("Please enter a valid card number.");
-        if (!isValidExpiry(card.expiry)) return setCardError("Please enter a valid future expiry date (MM/YY).");
-        if (!/^\d{3,4}$/.test(card.cvc)) return setCardError("Please enter a valid CVC.");
-      }
-      setCardError("");
-      setStep("confirm");
-    } else {
+    } else if (!placing) {
       placeOrder();
     }
   };
@@ -213,9 +188,9 @@ export default function CheckoutPage() {
                   {i < stepIndex ? "✓" : i + 1}
                 </div>
                 <span className={`capitalize hidden sm:inline ${step === s ? "text-foreground font-medium" : "text-foreground/40"}`}>
-                  {s}
+                  {s === "shipping" ? "Details" : "Pay"}
                 </span>
-                {i < 2 && <span className="text-foreground/20 mx-1">—</span>}
+                {i < STEPS.length - 1 && <span className="text-foreground/20 mx-1">—</span>}
               </div>
             ))}
           </div>
@@ -296,17 +271,27 @@ export default function CheckoutPage() {
               )}
 
               {step === "payment" && (
-                <div className="bg-white rounded-2xl border border-nude-light/50 p-6 space-y-4 animate-fade-in">
-                  <h2 className="text-lg font-serif font-bold text-foreground">Payment Method</h2>
-                  <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white rounded-2xl border border-nude-light/50 p-6 space-y-5 animate-fade-in">
+                  <div className="text-sm bg-nude-light/30 rounded-xl px-4 py-3 flex items-start justify-between gap-3">
+                    <div className="text-foreground/70">
+                      <p className="font-semibold text-foreground">{shipping.firstName} {shipping.lastName} · {email}</p>
+                      <p>{shipping.line1}{shipping.line2 && `, ${shipping.line2}`}, {shipping.city}, {shipping.state} {shipping.postalCode}, {shipping.country}</p>
+                    </div>
+                    <button type="button" onClick={() => setStep("shipping")} className="text-primary font-semibold shrink-0">
+                      Edit
+                    </button>
+                  </div>
+
+                  <fieldset className="space-y-3">
+                    <legend className="text-lg font-serif font-bold text-foreground mb-3">How would you like to pay?</legend>
                     {([
-                      ["card", "Credit / Debit Card"],
-                      ["cash_on_delivery", "Pay on Delivery"],
-                    ] as const).map(([value, label]) => (
+                      ["card", "Pay now", "Card, bank transfer, USSD or mobile money — secured by Flutterwave"],
+                      ["cash_on_delivery", "Pay on delivery", "Pay when your order arrives"],
+                    ] as const).map(([value, label, hint]) => (
                       <label
                         key={value}
-                        className={`flex items-center gap-2 px-4 py-3 rounded-xl border cursor-pointer text-sm ${
-                          paymentMethod === value ? "border-primary bg-primary/5 font-semibold" : "border-nude-dark/30"
+                        className={`flex items-start gap-3 px-4 py-3 rounded-xl border cursor-pointer text-sm ${
+                          paymentMethod === value ? "border-primary bg-primary/5" : "border-nude-dark/30"
                         }`}
                       >
                         <input
@@ -315,74 +300,33 @@ export default function CheckoutPage() {
                           value={value}
                           checked={paymentMethod === value}
                           onChange={() => setPaymentMethod(value)}
-                          className="accent-primary"
+                          className="accent-primary mt-1"
                         />
-                        {label}
+                        <span>
+                          <span className="block font-semibold text-foreground">{label}</span>
+                          <span className="block text-foreground/60">{hint}</span>
+                        </span>
                       </label>
                     ))}
-                  </div>
+                  </fieldset>
 
-                  {paymentMethod === "card" && (
-                    <>
-                      <div className="bg-nude-light/30 rounded-xl p-4 text-sm text-foreground/60">
-                        <p className="font-medium text-foreground mb-1">Test Mode</p>
-                        <p>Use 4242 4242 4242 4242, any future date and any CVC. Card details never leave your browser.</p>
-                      </div>
-                      <div>
-                        <label className={labelClass} htmlFor="cardNumber">Card Number</label>
-                        <input id="cardNumber" inputMode="numeric" autoComplete="cc-number" required value={card.number} onChange={(e) => setCard((c) => ({ ...c, number: e.target.value }))} placeholder="4242 4242 4242 4242" className={inputClass} />
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className={labelClass} htmlFor="expiry">Expiry Date</label>
-                          <input id="expiry" autoComplete="cc-exp" required value={card.expiry} onChange={(e) => setCard((c) => ({ ...c, expiry: e.target.value }))} placeholder="MM/YY" className={inputClass} />
-                        </div>
-                        <div>
-                          <label className={labelClass} htmlFor="cvc">CVC</label>
-                          <input id="cvc" inputMode="numeric" autoComplete="cc-csc" required value={card.cvc} onChange={(e) => setCard((c) => ({ ...c, cvc: e.target.value }))} placeholder="123" className={inputClass} />
-                        </div>
-                      </div>
-                      <div>
-                        <label className={labelClass} htmlFor="nameOnCard">Name on Card</label>
-                        <input id="nameOnCard" autoComplete="cc-name" required value={card.name} onChange={(e) => setCard((c) => ({ ...c, name: e.target.value }))} className={inputClass} />
-                      </div>
-                    </>
-                  )}
-                  {cardError && <p className="text-sm text-red-600" role="alert">{cardError}</p>}
-                  <div className="flex gap-3">
-                    <button type="button" onClick={() => setStep("shipping")} className="flex-1 py-3 rounded-xl border border-nude-dark/30 text-sm font-semibold text-foreground/70 hover:bg-nude-light/50 transition-colors">
-                      Back
-                    </button>
-                    <button type="submit" className="flex-1 bg-primary text-white py-3 rounded-xl font-semibold text-sm hover:bg-primary-dark transition-colors">
-                      Review Order
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {step === "confirm" && (
-                <div className="bg-white rounded-2xl border border-nude-light/50 p-6 space-y-4 animate-fade-in">
-                  <h2 className="text-lg font-serif font-bold text-foreground">Confirm Order</h2>
-                  <div className="space-y-3 text-sm">
-                    <h3 className="font-semibold text-foreground">Shipping To</h3>
-                    <p className="text-foreground/70">{shipping.firstName} {shipping.lastName} · {email}</p>
-                    <p className="text-foreground/70">{shipping.line1}{shipping.line2 && `, ${shipping.line2}`}</p>
-                    <p className="text-foreground/70">{shipping.city}, {shipping.state} {shipping.postalCode}, {shipping.country}</p>
-                    <hr className="border-nude-light" />
-                    <h3 className="font-semibold text-foreground">Payment</h3>
-                    <p className="text-foreground/70">
-                      {paymentMethod === "card" ? `Card ending in ${card.number.replace(/\D/g, "").slice(-4)}` : "Pay on delivery"}
-                    </p>
-                  </div>
                   {error && <p className="text-sm text-red-600 bg-red-50 rounded-xl px-4 py-3" role="alert">{error}</p>}
-                  <div className="flex gap-3">
-                    <button type="button" onClick={() => setStep("payment")} className="flex-1 py-3 rounded-xl border border-nude-dark/30 text-sm font-semibold text-foreground/70 hover:bg-nude-light/50 transition-colors">
-                      Back
-                    </button>
-                    <button type="submit" disabled={placing || !quote} className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold text-sm hover:bg-green-700 transition-colors disabled:opacity-60">
-                      {placing ? "Placing order…" : `Place Order — ${money(quote?.total ?? cartTotal)}`}
-                    </button>
-                  </div>
+                  <button
+                    type="submit"
+                    disabled={placing || !quote}
+                    className="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-primary-dark transition-colors disabled:opacity-60"
+                  >
+                    {placing
+                      ? paymentMethod === "card" ? "Opening secure payment…" : "Placing order…"
+                      : paymentMethod === "card"
+                      ? `Pay ${money(quote?.total ?? cartTotal)}`
+                      : `Place Order — ${money(quote?.total ?? cartTotal)}`}
+                  </button>
+                  {paymentMethod === "card" && (
+                    <p className="text-xs text-center text-foreground/50">
+                      You&apos;ll complete payment on Flutterwave&apos;s secure page and return here automatically.
+                    </p>
+                  )}
                 </div>
               )}
             </form>

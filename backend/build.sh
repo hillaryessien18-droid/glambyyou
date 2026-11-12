@@ -6,4 +6,9 @@ pip install --upgrade pip
 pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate --no-input
-python manage.py seed
+# Mirror catalog photos to Cloudinary when its credentials are configured.
+if [ -n "$CLOUDINARY_CLOUD_NAME" ]; then
+  python manage.py seed --cloudinary
+else
+  python manage.py seed
+fi

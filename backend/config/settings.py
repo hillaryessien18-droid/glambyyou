@@ -88,14 +88,30 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# PostgreSQL in production (DATABASE_URL), SQLite fallback for quick local runs.
-DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
-}
+# PostgreSQL via DATABASE_URL (Render) or POSTGRES_* variables (e.g. Neon);
+# SQLite fallback for quick local runs.
+if os.getenv("DATABASE_URL") or not os.getenv("POSTGRES_HOST"):
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.getenv("POSTGRES_DB", "neondb"),
+            "USER": os.getenv("POSTGRES_USER", ""),
+            "PASSWORD": os.getenv("POSTGRES_PASSWORD", ""),
+            "HOST": os.getenv("POSTGRES_HOST"),
+            "PORT": os.getenv("POSTGRES_PORT") or "5432",
+            "OPTIONS": {"sslmode": os.getenv("POSTGRES_SSLMODE", "require")},
+            "CONN_MAX_AGE": 600,
+            "CONN_HEALTH_CHECKS": True,
+        }
+    }
 
 AUTH_USER_MODEL = "accounts.User"
 
@@ -166,6 +182,24 @@ SPECTACULAR_SETTINGS = {
     "COMPONENT_SPLIT_REQUEST": True,
 }
 
+# --- Email ----------------------------------------------------------------
+# SMTP when credentials are configured; otherwise emails are printed to the console.
+
+EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.gmail.com")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT") or "587")
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
+EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", True)
+EMAIL_TIMEOUT = 20
+EMAIL_BACKEND = (
+    "django.core.mail.backends.smtp.EmailBackend"
+    if EMAIL_HOST_USER and EMAIL_HOST_PASSWORD
+    else "django.core.mail.backends.console.EmailBackend"
+)
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL") or (
+    f"GlowByYou <{EMAIL_HOST_USER}>" if EMAIL_HOST_USER else "GlowByYou <no-reply@glambyyou.com>"
+)
+
 # --- CORS -----------------------------------------------------------------
 
 CORS_ALLOWED_ORIGINS = env_list("CORS_ALLOWED_ORIGINS", "http://localhost:3000")
@@ -176,6 +210,37 @@ CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS", "http://localhost:3000")
 FREE_SHIPPING_THRESHOLD = 50
 FLAT_SHIPPING_RATE = 5.99
 TAX_RATE = float(os.getenv("TAX_RATE", "0.08"))
+# Where Flutterwave sends shoppers back to after paying (or backing out).
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000").rstrip("/")
+
+# --- Payments (Flutterwave Standard) --------------------------------------
+# Without a secret key, online orders fall back to test mode and are marked
+# paid immediately so the storefront still works locally.
+
+FLUTTERWAVE_SECRET_KEY = os.getenv("FLUTTERWAVE_SECRET_KEY", "")
+FLUTTERWAVE_PUBLIC_KEY = os.getenv("FLUTTERWAVE_PUBLIC_KEY", "")
+# The "secret hash" set under Settings → Webhooks; Flutterwave echoes it in the verif-hash header.
+FLUTTERWAVE_SECRET_HASH = os.getenv("FLUTTERWAVE_SECRET_HASH", "")
+FLUTTERWAVE_API_URL = os.getenv("FLUTTERWAVE_API_URL", "https://api.flutterwave.com/v3").rstrip("/")
+PAYMENT_CURRENCY = os.getenv("PAYMENT_CURRENCY", "USD").upper()
+STORE_LOGO_URL = os.getenv("STORE_LOGO_URL", "")
+
+# --- Cloudinary (product image hosting) -----------------------------------
+
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME", "")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY", "")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET", "")
+CLOUDINARY_FOLDER = os.getenv("CLOUDINARY_FOLDER", "glambyyou")
+CLOUDINARY_ENABLED = all((CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET))
+if CLOUDINARY_ENABLED:
+    import cloudinary
+
+    cloudinary.config(
+        cloud_name=CLOUDINARY_CLOUD_NAME,
+        api_key=CLOUDINARY_API_KEY,
+        api_secret=CLOUDINARY_API_SECRET,
+        secure=True,
+    )
 
 # --- Production hardening -------------------------------------------------
 

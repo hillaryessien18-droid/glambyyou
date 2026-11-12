@@ -8,6 +8,7 @@ import CartDrawer from "@/components/CartDrawer";
 import SearchModal from "@/components/SearchModal";
 import Toaster from "@/components/Toaster";
 import ImageFallback from "@/components/ImageFallback";
+import { HideDuringCheckout, SiteHeader } from "@/components/SiteChrome";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -35,11 +36,15 @@ export default function RootLayout({
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col bg-background font-sans text-foreground antialiased">
         <StoreProvider>
-          <Header />
+          <SiteHeader>
+            <Header />
+          </SiteHeader>
           <main className="flex-1">{children}</main>
-          <Footer />
-          <CartDrawer />
-          <SearchModal />
+          <HideDuringCheckout>
+            <Footer />
+            <CartDrawer />
+            <SearchModal />
+          </HideDuringCheckout>
           <Toaster />
           <ImageFallback />
         </StoreProvider>

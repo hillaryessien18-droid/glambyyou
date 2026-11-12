@@ -30,6 +30,21 @@ services:
         value: https://glambyyou-web.onrender.com
       - key: CSRF_TRUSTED_ORIGINS
         value: https://glambyyou-web.onrender.com
+      - key: FRONTEND_URL
+        value: https://glambyyou-web.onrender.com
+      # Secrets below are entered in the Render dashboard (sync: false keeps them out of git).
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: FLUTTERWAVE_PUBLIC_KEY
+        sync: false
+      - key: FLUTTERWAVE_SECRET_KEY
+        sync: false
+      - key: FLUTTERWAVE_SECRET_HASH
+        sync: false
 
   - type: web
     name: glambyyou-web

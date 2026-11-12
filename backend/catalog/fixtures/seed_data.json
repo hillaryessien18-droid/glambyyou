@@ -4,28 +4,28 @@
       "id": "1",
       "name": "Skincare",
       "slug": "skincare",
-      "image": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80",
       "itemCount": 15
     },
     {
       "id": "2",
       "name": "Perfumes",
       "slug": "perfumes",
-      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80",
       "itemCount": 15
     },
     {
       "id": "3",
       "name": "Lipsticks",
       "slug": "lipsticks",
-      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1773372238338-f26460145162?w=400&q=80",
       "itemCount": 15
     },
     {
       "id": "4",
       "name": "Makeup Kits",
       "slug": "makeup-kits",
-      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&q=80",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&q=80",
       "itemCount": 15
     }
   ],
@@ -36,8 +36,8 @@
       "slug": "radiance-renewal-serum",
       "description": "A lightweight, fast-absorbing serum infused with vitamin C and hyaluronic acid that brightens skin, reduces fine lines, and delivers deep hydration. Perfect for all skin types, this powerful formula works to even out skin tone and restore your natural glow.",
       "shortDescription": "Vitamin C & Hyaluronic Acid brightening serum for radiant skin",
-      "price": 68,
-      "originalPrice": 85,
+      "price": 210,
+      "originalPrice": 250,
       "rating": 4.8,
       "reviewCount": 342,
       "category": "skincare",
@@ -56,15 +56,15 @@
         "Antioxidant protection"
       ],
       "usage": "Apply 3-4 drops to clean, dry skin every morning and evening. Follow with moisturizer and sunscreen during the day.",
-      "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80"
+        "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=600&q=80",
+        "https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=600&q=80",
+        "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80"
       ],
       "isBestSeller": true,
-      "discount": 20,
+      "discount": 16,
       "isOnSale": true
     },
     {
@@ -73,7 +73,7 @@
       "slug": "hydra-glow-moisture-cream",
       "description": "An intensely hydrating cream that quenches dry skin with squalane, ceramides, and peptides. Rich yet lightweight, it restores the skin barrier and locks in moisture for a plump, dewy complexion.",
       "shortDescription": "Deep hydration cream with squalane and ceramides",
-      "price": 52,
+      "price": 148,
       "rating": 4.7,
       "reviewCount": 412,
       "category": "skincare",
@@ -91,12 +91,12 @@
         "Plumps fine lines"
       ],
       "usage": "Apply generously to face and neck after serum, both morning and evening. Gently press into skin for better absorption.",
-      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80"
+        "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=600&q=80",
+        "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&q=80",
+        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+        "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&q=80"
       ],
       "isNew": true
     },
@@ -106,7 +106,7 @@
       "slug": "gentle-cleanse-milky-cleanser",
       "description": "A soothing, milky cleanser that removes makeup and impurities without stripping the skin. Enriched with chamomile and oat extract, it calms sensitive skin and leaves it feeling soft and balanced.",
       "shortDescription": "Soothing milky cleanser with chamomile for sensitive skin",
-      "price": 32,
+      "price": 72,
       "rating": 4.8,
       "reviewCount": 367,
       "category": "skincare",
@@ -124,12 +124,12 @@
         "Maintains moisture barrier"
       ],
       "usage": "Apply to dry skin and massage gently. Add water to emulsify, then rinse thoroughly. Use morning and evening.",
-      "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
+        "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=600&q=80",
+        "https://images.unsplash.com/photo-1607602132700-068258431c6c?w=600&q=80",
+        "https://images.unsplash.com/photo-1618330834871-dd22c2c226ca?w=600&q=80",
+        "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80"
       ],
       "isNew": true
     },
@@ -139,7 +139,7 @@
       "slug": "age-defying-eye-cream",
       "description": "A rich, peptide-infused eye cream that targets fine lines, crow's feet, and puffiness around the delicate eye area. Formulated with caffeine and hyaluronic acid, it firms and brightens for a refreshed, youthful look.",
       "shortDescription": "Peptide-rich eye cream that reduces fine lines and puffiness",
-      "price": 48,
+      "price": 132,
       "rating": 4.6,
       "reviewCount": 312,
       "category": "skincare",
@@ -157,12 +157,12 @@
         "Deep hydration"
       ],
       "usage": "Tap a pea-sized amount gently around the orbital bone with your ring finger every morning and evening.",
-      "image": "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80"
+        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+        "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&q=80",
+        "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -172,8 +172,8 @@
       "slug": "retinol-night-serum",
       "description": "A potent yet gentle retinol serum that accelerates cell turnover to reduce fine lines, acne scars, and uneven texture. Encapsulated retinol delivers gradual release for minimal irritation while peptides support collagen production.",
       "shortDescription": "Encapsulated retinol serum for smoother, younger-looking skin",
-      "price": 62,
-      "originalPrice": 78,
+      "price": 185,
+      "originalPrice": 233,
       "rating": 4.7,
       "reviewCount": 456,
       "category": "skincare",
@@ -193,15 +193,15 @@
         "Improves texture"
       ],
       "usage": "Apply 2-3 drops to clean, dry skin every other night, gradually increasing to nightly use. Always follow with moisturizer and wear SPF daily.",
-      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"
+        "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80",
+        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80"
       ],
       "isBestSeller": true,
-      "discount": 20,
+      "discount": 21,
       "isOnSale": true
     },
     {
@@ -210,7 +210,7 @@
       "slug": "vitamin-c-brightening-mask",
       "description": "A gel-based sheet mask saturated with stabilized vitamin C and niacinamide that delivers instant radiance. In just 15 minutes, this treatment brightens dull skin, evens tone, and leaves your complexion glowing.",
       "shortDescription": "Brightening sheet mask with vitamin C for instant radiance",
-      "price": 18,
+      "price": 52,
       "rating": 4.5,
       "reviewCount": 198,
       "category": "skincare",
@@ -228,12 +228,12 @@
         "Hydrates deeply"
       ],
       "usage": "Apply clean sheet mask to face and leave on for 15 minutes. Remove and pat remaining serum into skin. Use 2-3 times per week.",
-      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80"
+        "https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=600&q=80",
+        "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+        "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=600&q=80"
       ],
       "isNew": true
     },
@@ -243,7 +243,7 @@
       "slug": "hyaluronic-acid-mist",
       "description": "An ultra-fine facial mist infused with multi-weight hyaluronic acid and rose water that instantly hydrates and refreshes. Perfect for setting makeup, midday hydration, or as a soothing pick-me-up anytime.",
       "shortDescription": "Hydrating face mist with hyaluronic acid and rose water",
-      "price": 22,
+      "price": 58,
       "rating": 4.4,
       "reviewCount": 143,
       "category": "skincare",
@@ -261,12 +261,12 @@
         "Lightweight mist"
       ],
       "usage": "Hold 6-8 inches from face and mist evenly. Use before moisturizer, over makeup, or throughout the day for a hydration boost.",
-      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"
+        "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&q=80",
+        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+        "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&q=80",
+        "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=600&q=80"
       ],
       "isNew": true
     },
@@ -276,7 +276,7 @@
       "slug": "pore-refining-toner",
       "description": "A gentle exfoliating toner with salicylic acid and witch hazel that minimizes pores and refines skin texture. Alcohol-free and infused with green tea, it tones and balances without stripping essential moisture.",
       "shortDescription": "Salicylic acid toner that minimizes pores and balances skin",
-      "price": 28,
+      "price": 64,
       "rating": 4.3,
       "reviewCount": 276,
       "category": "skincare",
@@ -294,12 +294,12 @@
         "Alcohol-free formula"
       ],
       "usage": "Apply to a cotton pad and sweep across face after cleansing. Use morning and evening. Follow with serum and moisturizer.",
-      "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1607602132700-068258431c6c?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80"
+        "https://images.unsplash.com/photo-1607602132700-068258431c6c?w=600&q=80",
+        "https://images.unsplash.com/photo-1618330834871-dd22c2c226ca?w=600&q=80",
+        "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80",
+        "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=600&q=80"
       ]
     },
     {
@@ -308,7 +308,7 @@
       "slug": "overnight-repair-mask",
       "description": "A luxurious leave-on sleeping mask that works while you rest to repair and rejuvenate tired skin. Packed with ceramides, peptides, and squalane, it delivers a refreshed, luminous complexion by morning.",
       "shortDescription": "Leave-on sleeping mask with ceramides for overnight repair",
-      "price": 44,
+      "price": 105,
       "rating": 4.7,
       "reviewCount": 389,
       "category": "skincare",
@@ -326,12 +326,12 @@
         "Strengthens moisture barrier"
       ],
       "usage": "Apply a generous layer to clean, dry skin as the last step in your evening routine. Leave on overnight and rinse gently in the morning.",
-      "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80"
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+        "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&q=80",
+        "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -341,7 +341,7 @@
       "slug": "brightening-eye-serum",
       "description": "A cooling, lightweight eye serum that targets dark circles and puffiness with vitamin C, caffeine, and hyaluronic acid. The roller-ball applicator delivers a gentle massage that depuffs and awakens tired eyes instantly.",
       "shortDescription": "Cooling eye serum with vitamin C for dark circles and puffiness",
-      "price": 38,
+      "price": 94,
       "rating": 4.5,
       "reviewCount": 215,
       "category": "skincare",
@@ -357,12 +357,12 @@
         "Cooling roller-ball application"
       ],
       "usage": "Roll gently under the eye area from inner to outer corner each morning and evening. Pat remaining serum in with your ring finger.",
-      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80"
+        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
+        "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80"
       ],
       "isNew": true
     },
@@ -372,7 +372,7 @@
       "slug": "pure-vitamin-c-serum",
       "description": "A concentrated 15% L-ascorbic acid serum that delivers potent antioxidant protection and visible brightening. Formulated with vitamin E and ferulic acid for enhanced stability, it fades hyperpigmentation and boosts collagen.",
       "shortDescription": "Concentrated 15% vitamin C serum for brightening and collagen support",
-      "price": 58,
+      "price": 165,
       "rating": 4.6,
       "reviewCount": 334,
       "category": "skincare",
@@ -392,12 +392,12 @@
         "Visible brightening"
       ],
       "usage": "Apply 4-5 drops to clean, dry skin every morning. Allow to absorb for one minute before applying moisturizer and SPF.",
-      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80"
+        "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+        "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=600&q=80",
+        "https://images.unsplash.com/photo-1600428877878-1a0fd85beda8?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -408,7 +408,7 @@
       "slug": "calming-facial-oil",
       "description": "A soothing blend of evening primrose, jojoba, and chamomile oils that calms redness and nourishes sensitive skin. This lightweight, non-comedogenic oil absorbs quickly and restores the skin’s natural barrier.",
       "shortDescription": "Soothing facial oil for sensitive, redness-prone skin",
-      "price": 46,
+      "price": 118,
       "rating": 4.4,
       "reviewCount": 167,
       "category": "skincare",
@@ -426,12 +426,12 @@
         "Restores barrier function"
       ],
       "usage": "Apply 2-3 drops to damp skin after serum. Gently press into face and neck. Use morning and evening for best results.",
-      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80"
+        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+        "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600&q=80",
+        "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=600&q=80",
+        "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600&q=80"
       ]
     },
     {
@@ -440,7 +440,7 @@
       "slug": "exfoliating-aha-glow-pads",
       "description": "Pre-soaked glycolic acid pads that gently exfoliate to reveal smoother, brighter skin. Infused with lactic acid and aloe vera, they refine texture, unclog pores, and promote a more even complexion with regular use.",
       "shortDescription": "Glycolic acid exfoliating pads for smoother and brighter skin",
-      "price": 34,
+      "price": 79,
       "rating": 4.3,
       "reviewCount": 289,
       "category": "skincare",
@@ -459,12 +459,12 @@
         "Promotes even tone"
       ],
       "usage": "Swipe a pad across clean, dry skin after cleansing, avoiding the eye area. Use 2-3 times per week, gradually increasing to nightly use.",
-      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1618330834871-dd22c2c226ca?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"
+        "https://images.unsplash.com/photo-1618330834871-dd22c2c226ca?w=600&q=80",
+        "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=600&q=80",
+        "https://images.unsplash.com/photo-1583209814683-c023dd293cc6?w=600&q=80",
+        "https://images.unsplash.com/photo-1607602132700-068258431c6c?w=600&q=80"
       ]
     },
     {
@@ -473,8 +473,7 @@
       "slug": "multi-peptide-firming-cream",
       "description": "A rich anti-aging moisturizer powered by a multi-peptide complex that firms, lifts, and restores facial contours. With added ceramides and shea butter, it delivers intense hydration while visibly tightening sagging skin.",
       "shortDescription": "Peptide-rich firming cream for lifted and tightened skin",
-      "price": 72,
-      "originalPrice": 90,
+      "price": 245,
       "rating": 4.6,
       "reviewCount": 198,
       "category": "skincare",
@@ -492,16 +491,14 @@
         "Restores facial contours"
       ],
       "usage": "Apply to face and neck each morning and evening after serum. Use gentle upward motions to massage cream into skin.",
-      "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80"
+        "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=600&q=80",
+        "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80",
+        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80"
       ],
-      "isBestSeller": true,
-      "discount": 20,
-      "isOnSale": true
+      "isBestSeller": true
     },
     {
       "id": "15",
@@ -509,7 +506,7 @@
       "slug": "niacinamide-10-treatment",
       "description": "A high-potency 10% niacinamide serum that targets enlarged pores, uneven texture, and excess sebum. Oil-free and non-comedogenic, it regulates oil production while strengthening the skin barrier for a balanced, matte finish.",
       "shortDescription": "High-potency niacinamide serum for pores and oil control",
-      "price": 36,
+      "price": 86,
       "rating": 4.5,
       "reviewCount": 423,
       "category": "skincare",
@@ -527,12 +524,12 @@
         "Improves skin texture"
       ],
       "usage": "Apply 2-3 drops to clean, dry skin morning and evening. Allow to absorb fully before applying moisturizer. Can be used with other serums.",
-      "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
       "images": [
+        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
         "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80"
+        "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80",
+        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80"
       ],
       "isNew": true
     },
@@ -542,7 +539,7 @@
       "slug": "midnight-bloom-eau-de-parfum",
       "description": "An enchanting floral-oriental fragrance that captures the mystery of a midnight garden. Top notes of bergamot and pink pepper give way to a heart of jasmine and rose, resting on a base of vanilla, amber, and sandalwood.",
       "shortDescription": "Captivating floral-oriental fragrance with notes of jasmine and vanilla",
-      "price": 95,
+      "price": 132,
       "rating": 4.7,
       "reviewCount": 256,
       "category": "perfumes",
@@ -560,9 +557,9 @@
       "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
       "images": [
         "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80"
+        "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80",
+        "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80",
+        "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -573,7 +570,7 @@
       "slug": "rose-garden-eau-de-parfum",
       "description": "A romantic floral fragrance that captures the essence of a blooming rose garden at dawn. Bulgarian rose and peony petals unfold over a warm base of musk, cedarwood, and a hint of honey for an enchanting, long-lasting scent.",
       "shortDescription": "Enchanting rose fragrance with warm notes of honey and cedar",
-      "price": 88,
+      "price": 118,
       "rating": 4.8,
       "reviewCount": 374,
       "category": "perfumes",
@@ -588,12 +585,12 @@
         "Perfect for special occasions"
       ],
       "usage": "Spray on pulse points and behind the ears. For a lighter aura, spray into the air and walk through the mist.",
-      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80"
+        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+        "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80",
+        "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80",
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -603,8 +600,8 @@
       "slug": "vanilla-amber-perfume-oil",
       "description": "A warm, intoxicating perfume oil that combines Madagascar vanilla with golden amber and a whisper of sandalwood. This concentrated, alcohol-free formula develops uniquely with your body chemistry and lasts all day.",
       "shortDescription": "Warm vanilla and amber perfume oil with sandalwood notes",
-      "price": 36,
-      "originalPrice": 45,
+      "price": 58,
+      "originalPrice": 72,
       "rating": 4.7,
       "reviewCount": 219,
       "category": "perfumes",
@@ -621,14 +618,14 @@
         "Unique to body chemistry"
       ],
       "usage": "Roll onto pulse points - wrists, inner elbows, and collarbone. Layer with unscented lotion for enhanced longevity.",
-      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80"
+        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
+        "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?w=600&q=80",
+        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80"
       ],
-      "discount": 20,
+      "discount": 19,
       "isOnSale": true
     },
     {
@@ -637,7 +634,7 @@
       "slug": "lavender-dreams-eau-de-cologne",
       "description": "A calming, aromatic cologne that blends French lavender with soft chamomile and a touch of vanilla. Light and refreshing, it promotes relaxation while leaving a soothing, elegant trail perfect for both day and evening wear.",
       "shortDescription": "Calming lavender cologne with chamomile for everyday elegance",
-      "price": 42,
+      "price": 72,
       "rating": 4.3,
       "reviewCount": 127,
       "category": "perfumes",
@@ -652,12 +649,12 @@
         "Light and refreshing"
       ],
       "usage": "Apply generously to pulse points and clothing. Ideal for daytime wear or as a calming spritz before bed.",
-      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"
+        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+        "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80",
+        "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80",
+        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80"
       ],
       "isNew": true
     },
@@ -667,7 +664,7 @@
       "slug": "jasmine-silk-fragrance",
       "description": "A luxurious, velvety fragrance that layers jasmine sambac with silky musk, creamy sandalwood, and a twist of bergamot. Sophisticated yet sensual, this Eau de Parfum glides over skin like silk and lingers beautifully throughout the day.",
       "shortDescription": "Luxurious jasmine and musk Eau de Parfum with sandalwood",
-      "price": 110,
+      "price": 185,
       "rating": 4.9,
       "reviewCount": 291,
       "category": "perfumes",
@@ -682,16 +679,14 @@
         "Elegant silk-like feel"
       ],
       "usage": "Apply to pulse points and décolletage. Perfect for evening events and special occasions.",
-      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+        "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80",
         "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80"
+        "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?w=600&q=80",
+        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80"
       ],
-      "isBestSeller": true,
-      "discount": 15,
-      "isOnSale": true
+      "isBestSeller": true
     },
     {
       "id": "21",
@@ -699,7 +694,7 @@
       "slug": "ocean-breeze-eau-de-cologne",
       "description": "An invigorating aquatic fragrance that transports you to a serene coastal escape. Notes of sea salt, white musk, and driftwood blend with hints of citrus and lavender for a refreshing, unisex scent.",
       "shortDescription": "Fresh aquatic cologne with sea salt and white musk",
-      "price": 45,
+      "price": 79,
       "rating": 4.3,
       "reviewCount": 167,
       "category": "perfumes",
@@ -714,12 +709,12 @@
         "Perfect for warm weather"
       ],
       "usage": "Spray liberally on pulse points and enjoy the fresh ocean-inspired scent throughout the day.",
-      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80"
+        "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80",
+        "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80",
+        "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80",
+        "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80"
       ],
       "isNew": true
     },
@@ -729,8 +724,8 @@
       "slug": "bloom-eau-de-toilette",
       "description": "A fresh, feminine floral EDT that captures the essence of a spring garden in full bloom. Notes of peony, freesia, and fresh apple blossom create an uplifting, everyday scent.",
       "shortDescription": "Fresh floral everyday fragrance with peony and apple blossom",
-      "price": 58,
-      "originalPrice": 72,
+      "price": 94,
+      "originalPrice": 117,
       "rating": 4.6,
       "reviewCount": 145,
       "category": "perfumes",
@@ -745,12 +740,12 @@
         "Light and uplifting"
       ],
       "usage": "Apply to pulse points and clothing. Layer with the Bloom body lotion for longer-lasting fragrance.",
-      "image": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
+        "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80",
+        "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80",
         "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80"
+        "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80"
       ],
       "isOnSale": true,
       "discount": 20
@@ -761,7 +756,7 @@
       "slug": "velvet-oud-eau-de-parfum",
       "description": "A rich, opulent fragrance that brings together rare oud wood with dark spices, saffron, and warm leather. This intense, long-lasting Eau de Parfum commands attention and leaves an unforgettable trail of sophistication.",
       "shortDescription": "Opulent oud fragrance with dark spices and warm leather",
-      "price": 145,
+      "price": 245,
       "rating": 4.8,
       "reviewCount": 189,
       "category": "perfumes",
@@ -777,12 +772,12 @@
         "Premium ingredients"
       ],
       "usage": "Apply sparingly to pulse points and clothing. A single spray is enough for a full day of captivating aroma.",
-      "image": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80"
+        "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?w=600&q=80",
+        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+        "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -793,7 +788,7 @@
       "slug": "citrine-sage-cologne",
       "description": "A vibrant, citrus-forward cologne that sparkles with Sicilian lemon, grapefruit, and a herbal heart of clary sage. Crisp, clean, and effortlessly elegant, it is the perfect signature scent for bright, sunny days.",
       "shortDescription": "Vibrant citrus and sage cologne for bright sunny days",
-      "price": 52,
+      "price": 86,
       "rating": 4.4,
       "reviewCount": 134,
       "category": "perfumes",
@@ -808,12 +803,12 @@
         "Perfect daytime fragrance"
       ],
       "usage": "Apply generously to pulse points and enjoy the crisp citrus notes. Reapply throughout the day for a refreshing boost.",
-      "image": "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"
+        "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80",
+        "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80",
+        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
+        "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?w=600&q=80"
       ]
     },
     {
@@ -822,7 +817,7 @@
       "slug": "white-musk-perfume-oil",
       "description": "A clean, sophisticated perfume oil built around silky white musk, soft iris, and a trace of sheer woods. Alcohol-free and gentle on skin, it creates a delicate, personal scent that melds beautifully with your natural warmth.",
       "shortDescription": "Clean white musk perfume oil with soft iris and sheer woods",
-      "price": 32,
+      "price": 52,
       "rating": 4.5,
       "reviewCount": 178,
       "category": "perfumes",
@@ -839,12 +834,12 @@
         "Personalized to body chemistry"
       ],
       "usage": "Roll onto pulse points and layer for a stronger scent. Perfect for everyday wear and layering with other fragrances.",
-      "image": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80"
+        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
+        "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?w=600&q=80",
+        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+        "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80"
       ],
       "isNew": true
     },
@@ -854,7 +849,7 @@
       "slug": "amber-noir-intense",
       "description": "A deep, seductive Eau de Parfum that wraps you in warm amber, black vanilla, and smokey tonka bean. With top notes of black currant and saffron, this intense fragrance evolves into a rich, gourmand base that lingers for hours.",
       "shortDescription": "Deep amber and black vanilla fragrance with smokey warmth",
-      "price": 120,
+      "price": 210,
       "rating": 4.7,
       "reviewCount": 213,
       "category": "perfumes",
@@ -870,11 +865,11 @@
         "Perfect for evening wear"
       ],
       "usage": "Spray on pulse points and décolletage. This intense fragrance requires only 1-2 sprays for all-day longevity.",
-      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+        "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80",
+        "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=600&q=80",
+        "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80",
         "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80"
       ],
       "isBestSeller": true
@@ -885,7 +880,7 @@
       "slug": "fresh-linen-eau-de-cologne",
       "description": "A crisp, clean cologne that evokes freshly laundered linen drying in a summer breeze. Notes of white cotton, ozonic sea air, and a hint of lavender create an effortlessly fresh and comforting everyday scent.",
       "shortDescription": "Crisp cotton and ozone cologne inspired by fresh laundry",
-      "price": 38,
+      "price": 64,
       "rating": 4.2,
       "reviewCount": 98,
       "category": "perfumes",
@@ -900,12 +895,12 @@
         "Perfect for office wear"
       ],
       "usage": "Spray generously over clothing and pulse points. Ideal as a refreshing top-up throughout the day.",
-      "image": "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80"
+        "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80",
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
+        "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?w=600&q=80",
+        "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600&q=80"
       ],
       "isNew": true
     },
@@ -915,7 +910,7 @@
       "slug": "sandalwood-smoke",
       "description": "A bold, unisex fragrance that layers creamy Mysore sandalwood with birch tar smoke, black pepper, and dry vetiver. Grounded and primal, this Eau de Parfum is for those who crave something dark, woody, and unforgettable.",
       "shortDescription": "Bold smoky sandalwood fragrance with black pepper and vetiver",
-      "price": 98,
+      "price": 148,
       "rating": 4.6,
       "reviewCount": 156,
       "category": "perfumes",
@@ -931,12 +926,12 @@
         "Unisex appeal"
       ],
       "usage": "Apply to pulse points. This fragrance is potent - start with a single spray and build as desired.",
-      "image": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80"
+        "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?w=600&q=80",
+        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+        "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80",
+        "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80"
       ]
     },
     {
@@ -945,7 +940,7 @@
       "slug": "peony-petals-eau-de-toilette",
       "description": "A delicate, feminine EDT that celebrates the lush beauty of peonies in full bloom. Juicy raspberry and bergamot top notes give way to a heart of peony, rose, and lily of the valley, resting on soft musk and white woods.",
       "shortDescription": "Delicate peony and raspberry floral for everyday elegance",
-      "price": 62,
+      "price": 105,
       "rating": 4.5,
       "reviewCount": 187,
       "category": "perfumes",
@@ -960,12 +955,12 @@
         "Light and wearable"
       ],
       "usage": "Spray generously on pulse points and enjoy the vibrant floral bouquet. Layer with the matching body cream for intensity.",
-      "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+        "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80",
         "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80"
+        "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?w=600&q=80"
       ]
     },
     {
@@ -974,7 +969,7 @@
       "slug": "iris-violet-perfume",
       "description": "A powdery, elegant fragrance that marries Florentine iris with soft violet petals and a touch of heliotrope. This refined Eau de Parfum is both nostalgic and modern, with a velvety finish that whispers sophistication.",
       "shortDescription": "Powdery iris and violet with a velvety sophisticated finish",
-      "price": 105,
+      "price": 165,
       "rating": 4.6,
       "reviewCount": 142,
       "category": "perfumes",
@@ -990,12 +985,12 @@
         "Long-lasting sophistication"
       ],
       "usage": "Spray on pulse points and behind the knees. This delicate fragrance blooms beautifully throughout the day.",
-      "image": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80"
+        "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?w=600&q=80",
+        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+        "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80",
+        "https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -1006,7 +1001,7 @@
       "slug": "velvet-matte-lipstick-rose-petal",
       "description": "A creamy, high-pigment matte lipstick that glides on smoothly and stays put all day. The rose petal shade is a universally flattering pink that complements every skin tone. Enriched with shea butter and vitamin E for comfortable wear.",
       "shortDescription": "Long-lasting matte lipstick in a universally flattering rose shade",
-      "price": 28,
+      "price": 210,
       "rating": 4.6,
       "reviewCount": 521,
       "category": "lipsticks",
@@ -1022,12 +1017,12 @@
         "High color payoff"
       ],
       "usage": "Apply directly to lips or use with a lip liner for precise application. Blot gently for a softer look.",
-      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80"
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238316-5f080152bcf1?w=600&q=80",
+        "https://images.unsplash.com/photo-1570088727237-68500d217455?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1037,7 +1032,7 @@
       "slug": "silk-kiss-lip-gloss-champagne",
       "description": "A high-shine, non-sticky lip gloss with a warm champagne shimmer. Infused with jojoba oil and vitamin E, it glides on like silk and keeps lips soft, smooth, and kissably glossy.",
       "shortDescription": "High-shine champagne lip gloss with jojoba oil",
-      "price": 22,
+      "price": 94,
       "rating": 4.4,
       "reviewCount": 298,
       "category": "lipsticks",
@@ -1053,12 +1048,12 @@
         "Champagne shimmer"
       ],
       "usage": "Apply directly from the applicator wand. Layer over lipstick or wear alone for a natural gloss.",
-      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1773372238338-f26460145162?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"
+        "https://images.unsplash.com/photo-1773372238338-f26460145162?w=600&q=80",
+        "https://images.unsplash.com/photo-1760860992755-c432351d47e9?w=600&q=80",
+        "https://images.unsplash.com/photo-1593939202577-6bf5b21cb507?w=600&q=80",
+        "https://images.unsplash.com/photo-1587313512268-a3b47aa30166?w=600&q=80"
       ]
     },
     {
@@ -1067,7 +1062,7 @@
       "slug": "crimson-velvet-lip-stain",
       "description": "A lightweight, transfer-proof liquid lip stain in a stunning crimson red. The unique water-gel formula dries down to a soft velvet finish that lasts up to 12 hours without feathering or fading.",
       "shortDescription": "Transfer-proof 12-hour liquid lip stain in crimson red",
-      "price": 26,
+      "price": 165,
       "rating": 4.7,
       "reviewCount": 445,
       "category": "lipsticks",
@@ -1083,12 +1078,12 @@
         "Velvet finish"
       ],
       "usage": "Apply to clean, dry lips. Start at the center and work outward. Allow to dry for 30 seconds for full transfer-proof wear.",
-      "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1626895872564-b691b6877b83?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80"
+        "https://images.unsplash.com/photo-1626895872564-b691b6877b83?w=600&q=80",
+        "https://images.unsplash.com/photo-1619352520578-8fefbfa2f904?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238324-e9cffa5f45b7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600852306752-085ca3285361?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1098,7 +1093,7 @@
       "slug": "nude-matte-lipstick-beige-elegance",
       "description": "A sophisticated matte lipstick in a warm beige-nude shade that flatters every complexion. The creamy, velvety formula glides on smoothly and stays comfortable for hours without drying or settling into fine lines.",
       "shortDescription": "Universal beige-nude matte lipstick with creamy velvety finish",
-      "price": 26,
+      "price": 185,
       "rating": 4.5,
       "reviewCount": 487,
       "category": "lipsticks",
@@ -1114,12 +1109,12 @@
         "6-hour staying power"
       ],
       "usage": "Apply directly to lips or pair with a nude lip liner for precise definition. Blot gently for a softer stain effect.",
-      "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1635263282145-253319c75fd4?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80"
+        "https://images.unsplash.com/photo-1635263282145-253319c75fd4?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=600&q=80",
+        "https://images.unsplash.com/photo-1770981667014-677a0bf91663?w=600&q=80",
+        "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1129,7 +1124,7 @@
       "slug": "glossy-lip-oil-cherry",
       "description": "A nourishing lip oil that delivers a juicy cherry tint with a high-shine, glass-like finish. Infused with jojoba oil, vitamin E, and squalane, it hydrates and plumps lips while giving them a luscious, kissable sheen.",
       "shortDescription": "High-shine cherry lip oil with jojoba for hydrated plump lips",
-      "price": 20,
+      "price": 79,
       "rating": 4.4,
       "reviewCount": 263,
       "category": "lipsticks",
@@ -1145,12 +1140,12 @@
         "Juicy cherry tint"
       ],
       "usage": "Apply with the doe-foot applicator directly to lips. Wear alone for a tinted sheen or layer over lipstick for extra gloss.",
-      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1631214499500-2e34edcaccfe?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80"
+        "https://images.unsplash.com/photo-1631214499500-2e34edcaccfe?w=600&q=80",
+        "https://images.unsplash.com/photo-1645961359170-c01fa306aa6b?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238349-41899694df31?w=600&q=80",
+        "https://images.unsplash.com/photo-1770733696552-14ec00705ea8?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1160,7 +1155,7 @@
       "slug": "longwear-lip-liner-nude",
       "description": "A creamy, long-lasting lip liner in the perfect nude shade that defines, shapes, and prevents lipstick from feathering. The self-sharpening pencil glides on effortlessly and stays put for up to 10 hours without smudging.",
       "shortDescription": "Creamy nude lip liner for 10-hour waterproof definition",
-      "price": 16,
+      "price": 58,
       "rating": 4.3,
       "reviewCount": 198,
       "category": "lipsticks",
@@ -1176,12 +1171,12 @@
         "10-hour wear"
       ],
       "usage": "Outline lips following your natural lip shape. Fill in lightly for a base that extends lipstick wear or wear alone for a matte nude look.",
-      "image": "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1773372238316-5f080152bcf1?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80"
+        "https://images.unsplash.com/photo-1773372238316-5f080152bcf1?w=600&q=80",
+        "https://images.unsplash.com/photo-1570088727237-68500d217455?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=600&q=80",
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1191,8 +1186,8 @@
       "slug": "matte-liquid-lipstick-berry",
       "description": "A richly pigmented liquid lipstick in a stunning berry shade that dries to a velvety matte finish. The lightweight, vitamin-enriched formula glides on smoothly and stays perfectly in place for up to 12 hours without cracking or fading.",
       "shortDescription": "Rich berry liquid lipstick with 12-hour velvet matte wear",
-      "price": 24,
-      "originalPrice": 30,
+      "price": 118,
+      "originalPrice": 148,
       "rating": 4.6,
       "reviewCount": 534,
       "category": "lipsticks",
@@ -1208,12 +1203,12 @@
         "Non-cracking formula"
       ],
       "usage": "Shake well. Apply a thin layer to clean, dry lips starting from the center outward. Allow to dry completely for transfer-proof results.",
-      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1760860992755-c432351d47e9?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80"
+        "https://images.unsplash.com/photo-1760860992755-c432351d47e9?w=600&q=80",
+        "https://images.unsplash.com/photo-1593939202577-6bf5b21cb507?w=600&q=80",
+        "https://images.unsplash.com/photo-1587313512268-a3b47aa30166?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238338-f26460145162?w=600&q=80"
       ],
       "discount": 20,
       "isOnSale": true
@@ -1224,7 +1219,7 @@
       "slug": "satin-lipstick-blush-nude",
       "description": "A creamy satin lipstick in a soft blush-nude shade that adds a touch of understated elegance to any look. Infused with shea butter and vitamin E, it provides comfortable wear with a luminous, satin-smooth finish.",
       "shortDescription": "Creamy satin lipstick in blush nude with shea butter",
-      "price": 24,
+      "price": 132,
       "rating": 4.4,
       "reviewCount": 312,
       "category": "lipsticks",
@@ -1240,12 +1235,12 @@
         "Comfortable all-day wear"
       ],
       "usage": "Apply directly to lips or with a brush for precise application. Layer for more intensity.",
-      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1619352520578-8fefbfa2f904?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"
+        "https://images.unsplash.com/photo-1619352520578-8fefbfa2f904?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238324-e9cffa5f45b7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600852306752-085ca3285361?w=600&q=80",
+        "https://images.unsplash.com/photo-1626895872564-b691b6877b83?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1255,7 +1250,7 @@
       "slug": "lip-scrub-balm-duo",
       "description": "A two-step lip care set that exfoliates and hydrates for perfectly smooth, soft lips. The brown sugar and shea butter scrub gently buffs away dry flakes, while the nourishing balm locks in moisture with jojoba oil and vitamin E.",
       "shortDescription": "Exfoliating brown sugar scrub and nourishing balm duo",
-      "price": 18,
+      "price": 72,
       "rating": 4.5,
       "reviewCount": 376,
       "category": "lipsticks",
@@ -1271,12 +1266,12 @@
         "Perfect prep for lipstick"
       ],
       "usage": "Apply scrub to damp lips and gently massage in circular motions for 30 seconds. Rinse and follow with the nourishing balm.",
-      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80"
+        "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=600&q=80",
+        "https://images.unsplash.com/photo-1770981667014-677a0bf91663?w=600&q=80",
+        "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=600&q=80",
+        "https://images.unsplash.com/photo-1635263282145-253319c75fd4?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -1287,7 +1282,7 @@
       "slug": "lip-plumping-gloss-clear",
       "description": "A crystal-clear lip gloss with a patented plumping complex that gives lips a subtle, natural fullness. Infused with cinnamon oil and hyaluronic acid, it stimulates circulation for an instant visible plump while keeping lips hydrated.",
       "shortDescription": "Crystal-clear plumping gloss for naturally fuller lips",
-      "price": 24,
+      "price": 148,
       "rating": 4.2,
       "reviewCount": 189,
       "category": "lipsticks",
@@ -1303,12 +1298,12 @@
         "Natural-looking fullness"
       ],
       "usage": "Apply a thin layer to bare lips or over lipstick. A mild tingling sensation indicates the plumping complex is working.",
-      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1645961359170-c01fa306aa6b?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80"
+        "https://images.unsplash.com/photo-1645961359170-c01fa306aa6b?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238349-41899694df31?w=600&q=80",
+        "https://images.unsplash.com/photo-1770733696552-14ec00705ea8?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214499500-2e34edcaccfe?w=600&q=80"
       ]
     },
     {
@@ -1317,7 +1312,7 @@
       "slug": "tinted-lip-balm-rose",
       "description": "A moisturizing tinted lip balm that delivers a sheer wash of rose color while nourishing dry lips. Made with beeswax, coconut oil, and shea butter, it provides all-day comfort with a subtle, natural-looking tint.",
       "shortDescription": "Sheer rose tinted balm with beeswax and coconut oil",
-      "price": 14,
+      "price": 52,
       "rating": 4.3,
       "reviewCount": 234,
       "category": "lipsticks",
@@ -1333,12 +1328,12 @@
         "Clean ingredients"
       ],
       "usage": "Glide across lips whenever needed. Reapply throughout the day for continuous moisture and a hint of rose color.",
-      "image": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1570088727237-68500d217455?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80"
+        "https://images.unsplash.com/photo-1570088727237-68500d217455?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=600&q=80",
+        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238316-5f080152bcf1?w=600&q=80"
       ]
     },
     {
@@ -1347,7 +1342,7 @@
       "slug": "cream-lip-stain-terracotta",
       "description": "A richly pigmented cream lip stain in a warm terracotta shade that complements every skin tone. The mousse-like texture glides on velvety smooth and dries to a soft, blurred matte finish that stays vibrant all day.",
       "shortDescription": "Warm terracotta cream lip stain with velvety matte finish",
-      "price": 22,
+      "price": 105,
       "rating": 4.5,
       "reviewCount": 178,
       "category": "lipsticks",
@@ -1363,12 +1358,12 @@
         "Blurred lip effect"
       ],
       "usage": "Shake well and apply a thin layer to clean, dry lips. Allow to set for 30 seconds for a smudge-proof finish.",
-      "image": "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1593939202577-6bf5b21cb507?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80",
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80"
+        "https://images.unsplash.com/photo-1593939202577-6bf5b21cb507?w=600&q=80",
+        "https://images.unsplash.com/photo-1587313512268-a3b47aa30166?w=600&q=80",
+        "https://images.unsplash.com/photo-1773372238338-f26460145162?w=600&q=80",
+        "https://images.unsplash.com/photo-1760860992755-c432351d47e9?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1378,7 +1373,7 @@
       "slug": "lip-liner-deep-berry",
       "description": "A richly pigmented lip liner in a deep berry shade that defines, contours, and enhances your natural lip shape. The ultra-creamy formula glides on effortlessly and locks lip color in place for flawless, all-day wear.",
       "shortDescription": "Deep berry lip liner for precise definition and all-day hold",
-      "price": 16,
+      "price": 64,
       "rating": 4.4,
       "reviewCount": 145,
       "category": "lipsticks",
@@ -1394,12 +1389,12 @@
         "Pairs perfectly with berry lipstick"
       ],
       "usage": "Outline lips following your natural shape. Fill in lightly for a base that intensifies and extends lipstick wear.",
-      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1773372238324-e9cffa5f45b7?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80"
+        "https://images.unsplash.com/photo-1773372238324-e9cffa5f45b7?w=600&q=80",
+        "https://images.unsplash.com/photo-1600852306752-085ca3285361?w=600&q=80",
+        "https://images.unsplash.com/photo-1626895872564-b691b6877b83?w=600&q=80",
+        "https://images.unsplash.com/photo-1619352520578-8fefbfa2f904?w=600&q=80"
       ]
     },
     {
@@ -1408,7 +1403,7 @@
       "slug": "glossy-lip-oil-peach",
       "description": "A luscious lip oil that delivers a sweet peach tint with an ultra-glossy, glass-like finish. Enriched with apricot kernel oil and vitamin E, it hydrates and adds a natural-looking flush of peachy warmth to your smile.",
       "shortDescription": "Peach-tinted glossy lip oil with apricot kernel oil",
-      "price": 20,
+      "price": 86,
       "rating": 4.3,
       "reviewCount": 213,
       "category": "lipsticks",
@@ -1424,12 +1419,12 @@
         "Non-sticky formula"
       ],
       "usage": "Apply with the doe-foot applicator directly to lips. Wear alone for a sheer peach glow or over lipstick for dimension.",
-      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1770981667014-677a0bf91663?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80",
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"
+        "https://images.unsplash.com/photo-1770981667014-677a0bf91663?w=600&q=80",
+        "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=600&q=80",
+        "https://images.unsplash.com/photo-1635263282145-253319c75fd4?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1439,7 +1434,7 @@
       "slug": "velvet-lipstick-mauve-dream",
       "description": "A stunning mauve velvet lipstick that combines the comfort of a satin with the sophistication of a matte. Infused with orchid extract and hyaluronic acid, it glides on weightlessly and keeps lips soft, smooth, and perfectly colored.",
       "shortDescription": "Mauve velvet lipstick with orchid extract for soft matte wear",
-      "price": 28,
+      "price": 245,
       "rating": 4.5,
       "reviewCount": 267,
       "category": "lipsticks",
@@ -1455,12 +1450,12 @@
         "Elegant mauve shade"
       ],
       "usage": "Apply directly to lips or use a lip brush for precise application. Layer for more opacity.",
-      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1773372238349-41899694df31?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80"
+        "https://images.unsplash.com/photo-1773372238349-41899694df31?w=600&q=80",
+        "https://images.unsplash.com/photo-1770733696552-14ec00705ea8?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214499500-2e34edcaccfe?w=600&q=80",
+        "https://images.unsplash.com/photo-1645961359170-c01fa306aa6b?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1470,8 +1465,8 @@
       "slug": "complete-glow-makeup-kit",
       "description": "Everything you need for a flawless look in one luxurious kit. Includes a full-coverage foundation, concealer, highlighter palette, blendable eyeshadow palette, 2 lip glosses, and a professional brush set. Housed in a premium mirrored compact.",
       "shortDescription": "All-in-one professional makeup kit with 12 essential products",
-      "price": 149,
-      "originalPrice": 199,
+      "price": 210,
+      "originalPrice": 250,
       "rating": 4.9,
       "reviewCount": 189,
       "category": "makeup-kits",
@@ -1489,15 +1484,15 @@
         "Cruelty-free formulas"
       ],
       "usage": "Use products in order: primer, foundation, concealer, setting powder, eyeshadow, liner, mascara, blush, highlighter, then lip color.",
-      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80"
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+        "https://images.unsplash.com/photo-1583784561105-a674080f391e?w=600&q=80",
+        "https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?w=600&q=80",
+        "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80"
       ],
       "isBestSeller": true,
-      "discount": 25,
+      "discount": 16,
       "isOnSale": true
     },
     {
@@ -1506,7 +1501,7 @@
       "slug": "golden-hour-highlighter",
       "description": "A silky, buildable highlighter that gives your skin a sun-kissed, golden glow. The finely-milled powder blends seamlessly and never looks glittery - just a luminous, lit-from-within radiance.",
       "shortDescription": "Buildable luminous highlighter for a sun-kissed glow",
-      "price": 36,
+      "price": 64,
       "rating": 4.5,
       "reviewCount": 178,
       "category": "makeup-kits",
@@ -1522,12 +1517,12 @@
         "Smooth, blendable texture"
       ],
       "usage": "Apply to high points of the face - cheekbones, brow bone, cupid’s bow, and inner corners of eyes. Use a fan brush for a subtle glow or a dense brush for intensity.",
-      "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093525885-282384697917?w=600&q=80",
+        "https://images.unsplash.com/photo-1652706299340-e8a346491541?w=600&q=80",
+        "https://images.unsplash.com/photo-1597225244660-1cd128c64284?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1537,7 +1532,7 @@
       "slug": "luminous-foundation-fair-ivory",
       "description": "A buildable, medium-coverage foundation with a luminous finish that looks like skin. Infused with light-reflecting pigments and hyaluronic acid, it blurs imperfections while keeping skin hydrated all day.",
       "shortDescription": "Medium-coverage luminous foundation with hyaluronic acid",
-      "price": 44,
+      "price": 86,
       "rating": 4.5,
       "reviewCount": 234,
       "category": "makeup-kits",
@@ -1555,12 +1550,12 @@
         "Blurs imperfections"
       ],
       "usage": "Shake well. Apply with fingertips, brush, or sponge starting from the center of the face and blending outward. Build coverage as needed.",
-      "image": "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80"
+        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
+        "https://images.unsplash.com/photo-1679623100266-db82be84f5f3?w=600&q=80",
+        "https://images.unsplash.com/photo-1599733589046-10c005739ef9?w=600&q=80"
       ]
     },
     {
@@ -1569,8 +1564,8 @@
       "slug": "professional-brush-set",
       "description": "A complete 12-piece brush set crafted with ultra-soft synthetic bristles and lightweight aluminum handles. Includes everything from foundation and concealer brushes to precision eyeshadow and blending brushes for a flawless application every time.",
       "shortDescription": "12-piece synthetic brush set for flawless makeup application",
-      "price": 68,
-      "originalPrice": 89,
+      "price": 148,
+      "originalPrice": 194,
       "rating": 4.8,
       "reviewCount": 612,
       "category": "makeup-kits",
@@ -1586,15 +1581,15 @@
         "Professional quality"
       ],
       "usage": "Use each brush for its intended purpose. Clean weekly with mild soap and warm water. Lay flat to dry.",
-      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"
+        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214500115-598fc2cb8d2d?w=600&q=80",
+        "https://images.unsplash.com/photo-1723150512429-bfa92988d845?w=600&q=80",
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80"
       ],
       "isBestSeller": true,
-      "discount": 25,
+      "discount": 24,
       "isOnSale": true
     },
     {
@@ -1603,7 +1598,7 @@
       "slug": "evening-glam-makeup-set",
       "description": "An all-in-one evening makeup collection featuring a full-coverage foundation, smoky eyeshadow palette, dramatic eyeliner, voluminous mascara, and a bold red lipstick. Everything you need to create a stunning, head-turning evening look.",
       "shortDescription": "Complete evening makeup collection with smoky eyes and red lip",
-      "price": 129,
+      "price": 185,
       "rating": 4.7,
       "reviewCount": 184,
       "category": "makeup-kits",
@@ -1621,12 +1616,12 @@
         "Travel-friendly case"
       ],
       "usage": "Start with primer, then apply foundation and concealer. Create smoky eyes with the palette, finish with liner, mascara, and the bold red lip.",
-      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80"
+        "https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&q=80",
+        "https://images.unsplash.com/photo-1511923199659-1c16881689de?w=600&q=80",
+        "https://images.unsplash.com/photo-1503236823255-94609f598e71?w=600&q=80",
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1636,7 +1631,7 @@
       "slug": "natural-glow-face-palette",
       "description": "A versatile face palette featuring four complementary shades: a silky highlighter, soft bronzer, natural blush, and a brightening setting powder. Perfectly curated for a fresh, radiant, lit-from-within glow that enhances any skin tone.",
       "shortDescription": "4-in-1 face palette with highlighter, bronzer, blush, and powder",
-      "price": 44,
+      "price": 94,
       "rating": 4.6,
       "reviewCount": 367,
       "category": "makeup-kits",
@@ -1652,11 +1647,11 @@
         "Travel-friendly compact"
       ],
       "usage": "Use bronzer to warm the perimeter of the face, blush on the apples of cheeks, highlighter on high points, and powder to set and brighten.",
-      "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1583784561105-a674080f391e?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+        "https://images.unsplash.com/photo-1583784561105-a674080f391e?w=600&q=80",
+        "https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?w=600&q=80",
+        "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80",
         "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80"
       ],
       "isBestSeller": true
@@ -1667,7 +1662,7 @@
       "slug": "essential-beauty-kit",
       "description": "A curated starter kit with five daily essentials: a tinted moisturizer with SPF, cream blush, a neutral eyeshadow quad, a versatile lip balm-tint, and a dual-ended brush. Perfect for beginners, travel, or anyone who loves a quick natural look.",
       "shortDescription": "Curated 5-piece starter kit for quick natural everyday beauty",
-      "price": 55,
+      "price": 132,
       "rating": 4.5,
       "reviewCount": 231,
       "category": "makeup-kits",
@@ -1685,12 +1680,12 @@
         "Travel-friendly"
       ],
       "usage": "Moisturize with the tinted SPF, add cream blush, sweep neutral shadows, and finish with the lip balm-tint for a polished natural look.",
-      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1625093525885-282384697917?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80",
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80"
+        "https://images.unsplash.com/photo-1625093525885-282384697917?w=600&q=80",
+        "https://images.unsplash.com/photo-1652706299340-e8a346491541?w=600&q=80",
+        "https://images.unsplash.com/photo-1597225244660-1cd128c64284?w=600&q=80",
+        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1700,7 +1695,7 @@
       "slug": "soft-smoky-eye-kit",
       "description": "A carefully curated eyeshadow kit with six blendable shades ranging from soft champagne to deep charcoal. Includes a gel liner, mini blending brush, and step-by-step guide for creating the perfect smoky eye every time.",
       "shortDescription": "6-shade eyeshadow kit with gel liner for perfect smoky eyes",
-      "price": 48,
+      "price": 105,
       "rating": 4.6,
       "reviewCount": 298,
       "category": "makeup-kits",
@@ -1716,12 +1711,12 @@
         "Step-by-step guide included"
       ],
       "usage": "Apply the lightest shade all over the lid, the medium shade in the crease, and the darkest shade along the lash line. Finish with gel liner.",
-      "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80"
+        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
+        "https://images.unsplash.com/photo-1679623100266-db82be84f5f3?w=600&q=80",
+        "https://images.unsplash.com/photo-1599733589046-10c005739ef9?w=600&q=80",
+        "https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -1732,7 +1727,7 @@
       "slug": "contour-highlight-duo",
       "description": "A perfectly paired contour and highlight stick duo for effortless face sculpting. The creamy contour shades define cheekbones and jawline while the luminous highlighter lifts and illuminates the high points of your face.",
       "shortDescription": "Creamy contour and highlight stick duo for face sculpting",
-      "price": 32,
+      "price": 52,
       "rating": 4.4,
       "reviewCount": 156,
       "category": "makeup-kits",
@@ -1748,12 +1743,12 @@
         "Blendable cream formula"
       ],
       "usage": "Apply contour under cheekbones, along jawline, and sides of nose. Apply highlighter on cheekbones, brow bone, and cupid’s bow. Blend with fingertips or a sponge.",
-      "image": "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1631214500115-598fc2cb8d2d?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80",
-        "https://images.unsplash.com/photo-1617897903246-719242758050?w=600&q=80"
+        "https://images.unsplash.com/photo-1631214500115-598fc2cb8d2d?w=600&q=80",
+        "https://images.unsplash.com/photo-1723150512429-bfa92988d845?w=600&q=80",
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+        "https://images.unsplash.com/photo-1583784561105-a674080f391e?w=600&q=80"
       ]
     },
     {
@@ -1762,7 +1757,7 @@
       "slug": "full-coverage-concealer-set",
       "description": "A trio of full-coverage concealers in three essential shades for color-correcting, brightening, and concealing. Infused with hyaluronic acid, the lightweight cream formula covers dark circles, blemishes, and redness without creasing.",
       "shortDescription": "Triple concealer set for color-correcting and full coverage",
-      "price": 38,
+      "price": 72,
       "rating": 4.7,
       "reviewCount": 345,
       "category": "makeup-kits",
@@ -1778,12 +1773,12 @@
         "Hydrating ingredients"
       ],
       "usage": "Apply the peach shade under eyes, green on redness, and the neutral shade on blemishes. Blend with a damp sponge for a seamless finish.",
-      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1511923199659-1c16881689de?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
-        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80",
-        "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=600&q=80",
-        "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=600&q=80"
+        "https://images.unsplash.com/photo-1511923199659-1c16881689de?w=600&q=80",
+        "https://images.unsplash.com/photo-1503236823255-94609f598e71?w=600&q=80",
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093525885-282384697917?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1793,7 +1788,7 @@
       "slug": "blush-bronze-palette",
       "description": "A harmonious palette featuring two blushes and two bronzers that work together to create a warm, sun-kissed complexion. The silky powders blend effortlessly and layer beautifully for a customizable, healthy-looking glow.",
       "shortDescription": "4-shade blush and bronzer palette for a warm sun-kissed look",
-      "price": 40,
+      "price": 79,
       "rating": 4.5,
       "reviewCount": 212,
       "category": "makeup-kits",
@@ -1809,12 +1804,12 @@
         "Four complementary shades"
       ],
       "usage": "Apply bronzer to warm the face perimeter, then blush to the apples of cheeks. Layer both for a more intense glow.",
-      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80",
-        "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&q=80",
-        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80"
+        "https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?w=600&q=80",
+        "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80",
+        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+        "https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=600&q=80"
       ],
       "isNew": true
     },
@@ -1824,7 +1819,7 @@
       "slug": "day-to-night-makeup-set",
       "description": "A versatile makeup collection with everything you need to transition seamlessly from office to evening. Includes a medium-coverage foundation, neutral-to-smoky eyeshadow palette, nude and red lipsticks, and a setting spray.",
       "shortDescription": "Versatile makeup collection for seamless day-to-night looks",
-      "price": 99,
+      "price": 165,
       "rating": 4.6,
       "reviewCount": 178,
       "category": "makeup-kits",
@@ -1842,12 +1837,12 @@
         "Setting spray for longevity"
       ],
       "usage": "Start with a natural day look using lighter shades. For evening, intensify eyeshadow, add liner, and switch to the bold lip.",
-      "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1652706299340-e8a346491541?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80"
+        "https://images.unsplash.com/photo-1652706299340-e8a346491541?w=600&q=80",
+        "https://images.unsplash.com/photo-1597225244660-1cd128c64284?w=600&q=80",
+        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80",
+        "https://images.unsplash.com/photo-1631214500115-598fc2cb8d2d?w=600&q=80"
       ],
       "isBestSeller": true
     },
@@ -1857,7 +1852,7 @@
       "slug": "setting-spray-primer-set",
       "description": "A dynamic duo that preps and sets your makeup for all-day perfection. The hydrating primer smooths and blurs pores for a flawless base, while the micro-mist setting spray locks in your look for up to 16 hours of wear.",
       "shortDescription": "Hydrating primer and 16-hour setting spray duo",
-      "price": 34,
+      "price": 58,
       "rating": 4.4,
       "reviewCount": 423,
       "category": "makeup-kits",
@@ -1873,12 +1868,12 @@
         "16-hour hold"
       ],
       "usage": "Apply primer after moisturizer and before foundation. Finish makeup with 3-4 spritzes of setting spray held 8 inches from face.",
-      "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1679623100266-db82be84f5f3?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=600&q=80",
-        "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=600&q=80",
-        "https://images.unsplash.com/photo-1567721913486-6585f069b332?w=600&q=80",
-        "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&q=80"
+        "https://images.unsplash.com/photo-1679623100266-db82be84f5f3?w=600&q=80",
+        "https://images.unsplash.com/photo-1599733589046-10c005739ef9?w=600&q=80",
+        "https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&q=80",
+        "https://images.unsplash.com/photo-1511923199659-1c16881689de?w=600&q=80"
       ],
       "isBestSeller": true,
       "isNew": true
@@ -1889,8 +1884,7 @@
       "slug": "bridal-makeup-collection",
       "description": "An exquisite bridal makeup set designed for your most special day. Features a luminous foundation, waterproof eye essentials, a pearl highlighter, setting spray, and a long-wearing lipstick in a keepsake satin case.",
       "shortDescription": "Complete bridal makeup collection in a keepsake satin case",
-      "price": 189,
-      "originalPrice": 249,
+      "price": 245,
       "rating": 4.9,
       "reviewCount": 87,
       "category": "makeup-kits",
@@ -1906,15 +1900,13 @@
         "Professional photographer-ready finish"
       ],
       "usage": "Follow the included bridal look guide. Start with primer, apply luminous foundation, define eyes, add highlighter, and finish with the long-wear lipstick.",
-      "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1723150512429-bfa92988d845?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=600&q=80",
-        "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&q=80",
-        "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=600&q=80"
-      ],
-      "discount": 25,
-      "isOnSale": true
+        "https://images.unsplash.com/photo-1723150512429-bfa92988d845?w=600&q=80",
+        "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80",
+        "https://images.unsplash.com/photo-1583784561105-a674080f391e?w=600&q=80",
+        "https://images.unsplash.com/photo-1620464003286-a5b0d79f32c2?w=600&q=80"
+      ]
     },
     {
       "id": "60",
@@ -1922,7 +1914,7 @@
       "slug": "travel-beauty-essentials",
       "description": "A TSA-friendly beauty kit with mini versions of all your essentials: a tinted moisturizer, cream blush, mascara, lip balm, makeup wipes, and a multi-purpose brush. Compact, leak-proof, and perfect for beauty on the go.",
       "shortDescription": "TSA-friendly travel kit with 6 beauty essentials",
-      "price": 48,
+      "price": 118,
       "rating": 4.3,
       "reviewCount": 312,
       "category": "makeup-kits",
@@ -1938,12 +1930,12 @@
         "Complete on-the-go routine"
       ],
       "usage": "Moisturize with the tinted moisturizer, add cream blush, apply mascara, and finish with lip balm. Use the multi-brush for all cream products.",
-      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
+      "image": "https://images.unsplash.com/photo-1503236823255-94609f598e71?w=600&q=80",
       "images": [
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=80",
-        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=600&q=80",
-        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
-        "https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&q=80"
+        "https://images.unsplash.com/photo-1503236823255-94609f598e71?w=600&q=80",
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80",
+        "https://images.unsplash.com/photo-1625093525885-282384697917?w=600&q=80",
+        "https://images.unsplash.com/photo-1652706299340-e8a346491541?w=600&q=80"
       ],
       "isNew": true
     }

@@ -118,6 +118,30 @@ class Order(models.Model):
     def can_cancel(self):
         return self.status in self.CANCELLABLE
 
+    @property
+    def awaiting_payment(self):
+        return self.status == self.Status.PENDING and self.payment_status == self.PaymentStatus.UNPAID
+
+    def mark_paid(self, reference):
+        self.status = self.Status.CONFIRMED
+        self.payment_status = self.PaymentStatus.PAID
+        self.payment_reference = str(reference)[:100]
+        self.save(update_fields=["status", "payment_status", "payment_reference", "updated_at"])
+
+    def cancel_and_restock(self):
+        """Cancels the order and returns its items to stock. Call inside a transaction."""
+        from catalog.models import Product
+
+        for item in self.items.all():
+            if item.product_id:
+                Product.objects.filter(pk=item.product_id).update(stock=models.F("stock") + item.quantity)
+        if self.coupon_id:
+            Coupon.objects.filter(pk=self.coupon_id, times_used__gt=0).update(times_used=models.F("times_used") - 1)
+        self.status = self.Status.CANCELLED
+        if self.payment_status == self.PaymentStatus.PAID:
+            self.payment_status = self.PaymentStatus.REFUNDED
+        self.save(update_fields=["status", "payment_status", "updated_at"])
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")

@@ -32,6 +32,14 @@ class CreateOrderSerializer(QuoteRequestSerializer):
     notes = serializers.CharField(required=False, allow_blank=True, max_length=500)
 
 
+class VerifyPaymentSerializer(serializers.Serializer):
+    orderNumber = serializers.CharField(max_length=20)
+    email = serializers.EmailField()
+    # Query parameters Flutterwave appends to the redirect URL.
+    transactionId = serializers.IntegerField(required=False, min_value=1)
+    status = serializers.CharField(required=False, allow_blank=True, max_length=30)
+
+
 class OrderItemSerializer(serializers.ModelSerializer):
     productId = serializers.SerializerMethodField()
     name = serializers.CharField(source="product_name")

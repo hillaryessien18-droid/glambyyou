@@ -1,9 +1,11 @@
 import json
 import random
+import re
 from decimal import Decimal
 from pathlib import Path
 
-from django.core.management.base import BaseCommand
+from django.conf import settings
+from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from catalog.models import Category, Product, ProductImage, SkinType
@@ -24,16 +26,21 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument("--stock", type=int, default=None, help="Set every product's stock to this value")
+        parser.add_argument(
+            "--cloudinary", action="store_true",
+            help="Upload catalog photos to Cloudinary (CLOUDINARY_* env vars) and serve them from there",
+        )
 
     @transaction.atomic
-    def handle(self, *args, stock=None, **options):
+    def handle(self, *args, stock=None, cloudinary=False, **options):
         data = json.loads(SEED_FILE.read_text(encoding="utf-8"))
         rng = random.Random(42)
+        image = self.cloudinary_mirror() if cloudinary else (lambda url, folder: url)
 
         categories = {}
         for c in data["categories"]:
             categories[c["slug"]], _ = Category.objects.update_or_create(
-                slug=c["slug"], defaults={"name": c["name"], "image": c["image"]}
+                slug=c["slug"], defaults={"name": c["name"], "image": image(c["image"], "categories")}
             )
 
         for p in data["products"]:
@@ -50,7 +57,7 @@ class Command(BaseCommand):
                     "ingredients": p.get("ingredients", ""),
                     "benefits": p.get("benefits", []),
                     "usage": p.get("usage", ""),
-                    "image": p["image"],
+                    "image": image(p["image"], p["category"]),
                     "is_best_seller": p.get("isBestSeller", False),
                     "is_new": p.get("isNew", False),
                     "imported_rating": Decimal(str(p["rating"])),
@@ -63,7 +70,8 @@ class Command(BaseCommand):
             product.skin_types.set([SkinType.objects.get_or_create(name=name)[0] for name in p.get("skinType", [])])
             product.images.all().delete()
             ProductImage.objects.bulk_create(
-                ProductImage(product=product, url=url, position=i) for i, url in enumerate(p.get("images", []))
+                ProductImage(product=product, url=image(url, p["category"]), position=i)
+                for i, url in enumerate(p.get("images", []))
             )
             product.refresh_rating()
 
@@ -86,3 +94,27 @@ class Command(BaseCommand):
             f"Seeded {len(categories)} categories, {len(data['products'])} products, "
             f"{len(data['testimonials'])} testimonials and {len(COUPONS)} coupons."
         ))
+
+    def cloudinary_mirror(self):
+        """Returns a function that uploads a remote photo once and gives back its Cloudinary URL."""
+        if not settings.CLOUDINARY_ENABLED:
+            raise CommandError("Set CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY and CLOUDINARY_API_SECRET first.")
+        import cloudinary
+        import cloudinary.uploader
+
+        cache = {}
+
+        def mirror(url, folder):
+            match = re.search(r"photo-[\w-]+", url)
+            public_id = f"{settings.CLOUDINARY_FOLDER}/{folder}/{match.group(0) if match else abs(hash(url))}"
+            width = 400 if folder == "categories" else 600
+            if public_id not in cache:
+                # overwrite=False makes re-seeding cheap: existing assets are reused, not re-uploaded.
+                cloudinary.uploader.upload(url, public_id=public_id, overwrite=False, resource_type="image")
+                self.stdout.write(f"  uploaded {public_id}")
+                cache[public_id] = True
+            return cloudinary.CloudinaryImage(public_id).build_url(
+                width=width, crop="limit", fetch_format="auto", quality="auto"
+            )
+
+        return mirror

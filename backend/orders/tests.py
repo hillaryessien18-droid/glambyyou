@@ -1,5 +1,7 @@
 from decimal import Decimal
+from unittest.mock import patch
 
+from django.test import override_settings
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -7,6 +9,7 @@ from accounts.models import User
 from catalog.models import Category, Product
 
 from .models import Coupon, Order
+from .payments import PaymentError
 
 SHIPPING = {
     "firstName": "Ada", "lastName": "L", "line1": "1 Main St", "city": "Austin",
@@ -115,3 +118,95 @@ class OrderTests(APITestCase):
     def test_coupon_usage_is_counted(self):
         self.client.post("/api/orders/", self.order_payload(couponCode="WELCOME10"), format="json")
         self.assertEqual(Coupon.objects.get(code="WELCOME10").times_used, 1)
+
+
+@override_settings(FLUTTERWAVE_SECRET_KEY="FLWSECK_TEST-x", FLUTTERWAVE_SECRET_HASH="hook-secret", PAYMENT_CURRENCY="USD")
+class FlutterwavePaymentTests(APITestCase):
+    @classmethod
+    def setUpTestData(cls):
+        category = Category.objects.create(name="Perfumes", slug="perfumes")
+        cls.perfume = Product.objects.create(
+            name="Oud", slug="oud", price=Decimal("120.00"), stock=3, category=category, description="d",
+            short_description="s", brand="B", image="https://images.unsplash.com/photo-1.jpg",
+        )
+
+    def place_order(self):
+        with patch("orders.payments._request", return_value={"link": "https://checkout.flutterwave.com/pay/abc"}) as req:
+            res = self.client.post("/api/orders/", {
+                "email": "ada@example.com", "items": [{"productId": self.perfume.pk, "quantity": 2}],
+                "shipping": SHIPPING, "paymentMethod": "card",
+            }, format="json")
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED, res.data)
+        payload = req.call_args.args[2]
+        self.assertEqual(payload["tx_ref"], res.data["orderNumber"])
+        self.assertEqual(payload["amount"], str(res.data["total"]))
+        return res.data
+
+    def verify(self, order, **extra):
+        return self.client.post("/api/orders/verify-payment/", {
+            "orderNumber": order["orderNumber"], "email": "ada@example.com", **extra,
+        }, format="json")
+
+    def transaction(self, order, **overrides):
+        return {"id": 991, "status": "successful", "tx_ref": order["orderNumber"],
+                "amount": float(order["total"]), "currency": "USD", **overrides}
+
+    def test_order_waits_for_payment_and_returns_checkout_link(self):
+        order = self.place_order()
+        self.assertEqual(order["paymentUrl"], "https://checkout.flutterwave.com/pay/abc")
+        self.assertEqual((order["status"], order["paymentStatus"]), ("pending", "unpaid"))
+        self.perfume.refresh_from_db()
+        self.assertEqual(self.perfume.stock, 1)
+
+    def test_verified_transaction_marks_order_paid(self):
+        order = self.place_order()
+        with patch("orders.payments._request", return_value=self.transaction(order)) as req:
+            res = self.verify(order, transactionId=991, status="successful")
+        req.assert_called_once_with("GET", "/transactions/991/verify")
+        self.assertEqual((res.data["status"], res.data["paymentStatus"]), ("confirmed", "paid"))
+        self.assertEqual(Order.objects.get().payment_reference, "991")
+
+    def test_underpaid_or_foreign_transaction_is_rejected(self):
+        order = self.place_order()
+        for bad in ({"amount": 1}, {"tx_ref": "GBY-OTHER"}, {"currency": "NGN"}, {"status": "failed"}):
+            with patch("orders.payments._request", return_value=self.transaction(order, **bad)):
+                res = self.verify(order, transactionId=991, status="successful")
+            self.assertEqual(res.status_code, status.HTTP_402_PAYMENT_REQUIRED, bad)
+        self.assertEqual(Order.objects.get().payment_status, "unpaid")
+
+    def test_cancelled_payment_releases_stock(self):
+        order = self.place_order()
+        res = self.verify(order, status="cancelled")
+        self.assertEqual(res.data["status"], "cancelled")
+        self.perfume.refresh_from_db()
+        self.assertEqual(self.perfume.stock, 3)
+
+    def test_verify_requires_matching_email(self):
+        order = self.place_order()
+        res = self.client.post("/api/orders/verify-payment/", {
+            "orderNumber": order["orderNumber"], "email": "someone@else.com", "status": "cancelled",
+        }, format="json")
+        self.assertEqual(res.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_provider_failure_cancels_order(self):
+        with patch("orders.payments._request", side_effect=PaymentError("down")):
+            res = self.client.post("/api/orders/", {
+                "email": "ada@example.com", "items": [{"productId": self.perfume.pk, "quantity": 1}],
+                "shipping": SHIPPING, "paymentMethod": "card",
+            }, format="json")
+        self.assertEqual(res.status_code, status.HTTP_502_BAD_GATEWAY)
+        self.assertEqual(Order.objects.get().status, "cancelled")
+        self.perfume.refresh_from_db()
+        self.assertEqual(self.perfume.stock, 3)
+
+    def test_webhook_requires_secret_hash_and_marks_paid(self):
+        order = self.place_order()
+        event = {"event": "charge.completed", "data": self.transaction(order)}
+        res = self.client.post("/api/payments/flutterwave/webhook/", event, format="json", HTTP_VERIF_HASH="wrong")
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+        with patch("orders.payments._request", return_value=self.transaction(order)):
+            res = self.client.post(
+                "/api/payments/flutterwave/webhook/", event, format="json", HTTP_VERIF_HASH="hook-secret"
+            )
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+        self.assertEqual(Order.objects.get().payment_status, "paid")
